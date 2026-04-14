@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моє портфоліо</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Моє портфоліо</h1>
+
+      <div class="theme-switcher">
+        <label class="switch">
+          <input type="checkbox" id="themeToggle" />
+          <span class="slider"></span>
+        </label>
+        <span id="themeLabel">Світла тема</span>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="about">
+        <h2>Про мене</h2>
+        <p>
+          Я студент Національного університету "Львівська політехніка", який
+          навчається за спеціальністю <b>Кібербезпека</b>. Цікавлюся
+          інформаційною безпекою, аналізом кіберінцидентів та моніторингом
+          мережевої активності. Маю аналітичне мислення, уважність до деталей та
+          бажання розвиватися у сфері кіберзахисту.
+        </p>
+      </section>
+
+      <section class="comments-section">
+        <h2>Коментарі попередніх роботодавців</h2>
+        <div id="commentsContainer" class="comments-container">
+          <p>Завантаження коментарів...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <h3>Інформація з localStorage</h3>
+      <div id="storageInfo"></div>
+    </footer>
+
+    <div id="feedbackModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Форма зворотного зв’язку</h2>
+
+        <form
+          id="feedbackForm"
+          action="https://formspree.io/f/mwvrqdja"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Ім’я" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Номер телефону"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Ваше повідомлення"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit">Відправити</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
